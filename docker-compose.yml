@@ -1,0 +1,88 @@
+services:
+  nginx:
+    image: nginx:latest
+    container_name: nginx
+    ports:
+      - "80:80"
+    volumes:
+      - ./nginx/default.conf:/etc/nginx/conf.d/default.conf
+      - ./localhost:/var/www/localhost
+      - ./localhost7:/var/www/localhost7
+      - ./localhost5:/var/www/localhost5
+    depends_on:
+      - php82
+      - php74
+      - php56
+      - phpmyadmin
+
+  php82:
+    image: php:8.2-fpm
+    container_name: php82
+    volumes:
+      - ./localhost:/var/www/localhost
+
+  php74:
+    image: php:7.4-fpm
+    container_name: php74
+    volumes:
+      - ./localhost7:/var/www/localhost7
+
+  php56:
+    image: php:5.6-fpm
+    container_name: php56
+    platform: linux/amd64
+    volumes:
+      - ./localhost5:/var/www/localhost5
+
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+  # PERHATIKAN!! perubahan akan menghapus database
+  # docker compose down -v 
+>>>>>>> b0b5f7a (Initial commit)
+>>>>>>> 106b076 (Initial commit)
+  mysql:
+    image: mysql:5.7
+    container_name: mysql
+    restart: always
+    platform: linux/amd64
+    environment:
+<<<<<<< HEAD
+      MYSQL_ROOT_PASSWORD: CHANGE_ROOT_PASSWORD
+      MYSQL_USER: CHANGE_USERNAME
+      MYSQL_PASSWORD: CHANGE_PASSWORD
+=======
+<<<<<<< HEAD
+      MYSQL_ROOT_PASSWORD: CHANGE_ROOT_PASSWORD
+      MYSQL_USER: CHANGE_USERNAME
+      MYSQL_PASSWORD: CHANGE_PASSWORD
+=======
+      MYSQL_ROOT_PASSWORD: 0aja
+>>>>>>> b0b5f7a (Initial commit)
+>>>>>>> 106b076 (Initial commit)
+    volumes:
+      - ./mysql_data:/var/lib/mysql
+
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    container_name: phpmyadmin
+    restart: always
+    ports:
+      - "8080:80"
+    depends_on:
+      - mysql
+    environment:
+      PMA_HOST: mysql
+      PMA_PORT: 3306
+<<<<<<< HEAD
+      PMA_USER: CHANGE_USERNAME
+      PMA_PASSWORD: CHANGE_PASSWORD
+=======
+<<<<<<< HEAD
+      PMA_USER: CHANGE_USERNAME
+      PMA_PASSWORD: CHANGE_PASSWORD
+=======
+
+>>>>>>> b0b5f7a (Initial commit)
+>>>>>>> 106b076 (Initial commit)

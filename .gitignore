@@ -1,0 +1,45 @@
+# Sistem
+.DS_Store
+Thumbs.db
+
+# File environment
+.env
+*.env
+
+# Direktori vendor (jika nanti pakai Composer)
+vendor/
+
+# Cache dan log
+*.log
+*.pid
+*.seed
+*.pid.lock
+*.sqlite
+*.swp
+
+# Folder docker volume
+mysql_data/
+
+# Abaikan semua isi folder localhost
+localhost/*
+localhost5/*
+localhost7/*
+
+# Kecualikan index.php
+!localhost/index.php
+!localhost5/index.php
+!localhost7/index.php
+
+
+# Nginx konfigurasi runtime atau build
+nginx/*.conf~
+
+# Folder upload/temp (opsional)
+uploads/
+tmp/
+
+# Backup & artefak editor
+*.bak
+*.tmp
+*.old
+*~
