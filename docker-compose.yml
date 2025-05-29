@@ -34,33 +34,15 @@ services:
     volumes:
       - ./localhost5:/var/www/localhost5
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
   # PERHATIKAN!! perubahan akan menghapus database
   # docker compose down -v 
->>>>>>> b0b5f7a (Initial commit)
->>>>>>> 106b076 (Initial commit)
   mysql:
     image: mysql:5.7
     container_name: mysql
     restart: always
     platform: linux/amd64
     environment:
-<<<<<<< HEAD
-      MYSQL_ROOT_PASSWORD: CHANGE_ROOT_PASSWORD
-      MYSQL_USER: CHANGE_USERNAME
-      MYSQL_PASSWORD: CHANGE_PASSWORD
-=======
-<<<<<<< HEAD
-      MYSQL_ROOT_PASSWORD: CHANGE_ROOT_PASSWORD
-      MYSQL_USER: CHANGE_USERNAME
-      MYSQL_PASSWORD: CHANGE_PASSWORD
-=======
       MYSQL_ROOT_PASSWORD: 0aja
->>>>>>> b0b5f7a (Initial commit)
->>>>>>> 106b076 (Initial commit)
     volumes:
       - ./mysql_data:/var/lib/mysql
 
@@ -75,14 +57,4 @@ services:
     environment:
       PMA_HOST: mysql
       PMA_PORT: 3306
-<<<<<<< HEAD
-      PMA_USER: CHANGE_USERNAME
-      PMA_PASSWORD: CHANGE_PASSWORD
-=======
-<<<<<<< HEAD
-      PMA_USER: CHANGE_USERNAME
-      PMA_PASSWORD: CHANGE_PASSWORD
-=======
 
->>>>>>> b0b5f7a (Initial commit)
->>>>>>> 106b076 (Initial commit)
