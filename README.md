@@ -24,9 +24,7 @@ Satu container Docker, banyak versi PHP. Proyek ini memudahkan Anda menjalankan 
 
 ## 🔧 Config
 
-- MYSQL_ROOT_PASSWORD   : ganti password root anda
-- MYSQL_USER            : ganti username anda
-- MYSQL_PASSWORD        : ganti password anda
+- GANTI_PASSWORD_ANDA   : ganti password anda
 
 ---
 

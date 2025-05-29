@@ -34,15 +34,13 @@ services:
     volumes:
       - ./localhost5:/var/www/localhost5
 
-  # PERHATIKAN!! perubahan akan menghapus database
-  # docker compose down -v 
   mysql:
     image: mysql:5.7
     container_name: mysql
     restart: always
     platform: linux/amd64
     environment:
-      MYSQL_ROOT_PASSWORD: 0aja
+      MYSQL_ROOT_PASSWORD: GANTI_PASSWORD_ANDA
     volumes:
       - ./mysql_data:/var/lib/mysql
 
